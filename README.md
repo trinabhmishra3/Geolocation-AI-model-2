@@ -51,5 +51,19 @@ Setup (Windows 11):
 
 2. Install PyCharm
 
-3. 
+3. Download de code: Zorg dat je de repository met de drie scripts (Dataset preparation, Making and training the model, Using the model to predict) op je computer hebt
+
+4. Open PyCharm
+
+5. Open het project in PyCharm
+
+6. Installeer de benodigde libraries d.m.v. pip install 'de library die je wil installeren'
+
+7. Run de scripts met de 'run' knop
+
+8. Volgorde van scripts
+   a. Dataset preparation → afbeeldingen croppen en selecteren
+   b. Making and training the model → model trainen
+   c. Using the model to predict → nieuwe afbeeldingen voorspellen
+9. Controleer de paden in de scripts: zorg dat source_dir, target_dir, model_path en TEST_IMAGES_DIR overeenkomen met waar de mappen op jouw computer staan
 
