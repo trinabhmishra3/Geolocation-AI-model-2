@@ -62,8 +62,12 @@ Setup (Windows 11):
 7. Run de scripts met de 'run' knop
 
 8. Volgorde van scripts
+ 
    a. Dataset preparation → afbeeldingen croppen en selecteren
+
    b. Making and training the model → model trainen
+
    c. Using the model to predict → nieuwe afbeeldingen voorspellen
-9. Controleer de paden in de scripts: zorg dat source_dir, target_dir, model_path en TEST_IMAGES_DIR overeenkomen met waar de mappen op jouw computer staan
+   
+10. Controleer de paden in de scripts: zorg dat source_dir, target_dir, model_path en TEST_IMAGES_DIR overeenkomen met waar de mappen op jouw computer staan
 
