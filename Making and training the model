@@ -12,7 +12,7 @@ geo_data_dir = pathlib.Path(r"C:\Users\Eigenaar\Downloads\bewerkt_geo")
 img_height, img_width = 224, 224
 batch_size = 32
 random_seed = 123
-epochs = 28
+epochs = 10
 
 train_ds = tf.keras.utils.image_dataset_from_directory(
     geo_data_dir,
@@ -61,7 +61,7 @@ model.compile(
 
 early_stopping = EarlyStopping(
     monitor='val_accuracy',
-    patience=5,
+    patience=2,
     restore_best_weights=True
 )
 
