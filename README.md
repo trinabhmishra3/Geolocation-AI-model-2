@@ -1,8 +1,7 @@
 # Geolocation-AI-model-2
 Geolocation AI voor profielwerkstuk, Trinabh en Ivo
 
--Experimental setup/PvE
-
+Experimental setup/PvE:
 -ASUS TUF Gaming FX505DD/DT/DU
 
 -Processor: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx 
@@ -16,3 +15,7 @@ Geolocation AI voor profielwerkstuk, Trinabh en Ivo
 -Python interpreter: Anaconda PyCharm
 
 -Dataset: https://www.kaggle.com/datasets/ubitquitin/geolocation-geoguessr-images-50k
+
+Software:
+-
+
