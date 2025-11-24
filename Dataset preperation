@@ -1,0 +1,47 @@
+import os
+import random
+from PIL import Image
+from tqdm import tqdm
+
+source_dir = r"C:\Users\Eigenaar\Downloads\Nieuwe map"
+target_dir = r"C:\Users\Eigenaar\Downloads\bewerkt_geo"
+min_images_per_class = 500
+images_per_class = 500
+
+def crop_foto(img):
+    w, h = img.size
+    left = int(w * 0.10)
+    right = int(w * 0.78)
+    top = 0
+    bottom = h
+    return img.crop((left, top, right, bottom))
+
+if not os.path.exists(target_dir):
+    os.makedirs(target_dir)
+
+for country in os.listdir(source_dir):
+    country_path = os.path.join(source_dir, country)
+
+    images = [f for f in os.listdir(country_path)
+              if f.lower().endswith((".jpg", ".jpeg", ".png"))]
+
+    if len(images) < min_images_per_class:
+        continue
+
+    target_country_path = os.path.join(target_dir, country)
+
+    if not os.path.exists(target_country_path):
+        os.makedirs(target_country_path)
+
+
+
+    selected_images = random.sample(images, images_per_class)
+
+    for img_name in tqdm(selected_images, desc=country):
+        img_path = os.path.join(country_path, img_name)
+        img = Image.open(img_path).convert("RGB")
+
+        cropped = crop_foto(img)
+
+        save_path = os.path.join(target_country_path, img_name)
+        cropped.save(save_path)
